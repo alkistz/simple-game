@@ -21,7 +21,7 @@ class GameView(arcade.Window):
         # Call the parent class to set up the window
         super().__init__(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, resizable=True)
         self.player_texture = arcade.load_texture(
-            ":resources:images/animated_characters/zombie/zombie_idle.png"
+            ":resources:images/animated_characters/female_adventurer/femaleAdventurer_idle.png"
         )
         self.player_sprite = arcade.Sprite(self.player_texture)
         self.player_sprite.center_x = 64
