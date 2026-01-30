@@ -9,7 +9,7 @@ import arcade
 # Constants
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
-WINDOW_TITLE = "Platformer"
+WINDOW_TITLE = "Kordelio Aliteia"
 
 
 class GameView(arcade.Window):
@@ -19,8 +19,13 @@ class GameView(arcade.Window):
 
     def __init__(self):
         # Call the parent class to set up the window
-        super().__init__(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE)
-
+        super().__init__(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, resizable=True)
+        self.player_texture = arcade.load_texture(
+            ":resources:images/animated_characters/zombie/zombie_idle.png"
+        )
+        self.player_sprite = arcade.Sprite(self.player_texture)
+        self.player_sprite.center_x = 64
+        self.player_sprite.center_y = 123
         self.background_color = arcade.csscolor.CORNFLOWER_BLUE
 
     def setup(self):
@@ -37,6 +42,7 @@ class GameView(arcade.Window):
         self.clear()
 
         # Code to draw other things will go here
+        arcade.draw_sprite(self.player_sprite)
 
 
 def main():

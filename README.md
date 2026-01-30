@@ -1,0 +1,1 @@
+https://api.arcade.academy/en/stable/tutorials/platform_tutorial/index.html#platformer-tutorial
