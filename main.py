@@ -94,6 +94,10 @@ class GameWindow(arcade.Window):
     def on_draw(self):
         """Draw everything"""
         self.clear()
+        self.wall_list.draw()
+        self.bullet_list.draw()
+        self.item_list.draw()
+        self.player_list.draw()
 
 
 def main():
